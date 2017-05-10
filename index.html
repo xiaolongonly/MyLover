@@ -21,15 +21,35 @@
 			demo.setOptions({
 				sentences: [
 					{
-						ch: ["山",{pause: 1500}/* Pause 1500ms */,"有木兮","木","幼稚",{del: 2}/* Delete 2 characters */,"有枝","，\n","心悦君系",{del: 1},"兮","君不知","。\n"],
-						py: ["shan","","youmuxi","mu","youzhi","","youzhi","，","xinyuejunxi","","xi","junbuzhi","。"],
+						ch: ["记得","大三","那年","我在","某次","《","网络","证券","》","的","下课",{del:3},"下课","遇到了","你",",\n",
+						"那时候","觉得","仿佛","看到了","一个","仙女",",","从那以后","我","就","一直","偷偷的","关注着","你","。\n",
+						"当然",",","那时候","的","我们","都","不熟","我也","一直","没有","勇气","把","喜欢你","说","出","口","。\n",
+						"我也","不知道","为什么",",","后来","我们","似乎","彼此","走进了",{del:2},"近了","。","可能","是","缘分",",","也","可能","是我","傻傻","的","努力","吧","。\n",
+						"记得","那天",",","你","找我","要我","跟你","一起","合做","比赛","项目","的","时候",",\n",
+						"我","当时","超激动的",",","想都没想","就","直接","答应","了","。\n",
+						"后面","发现","自己","还是","自大了",",","因为","对","技术","并不是","很了解",",","项目","依然","存在","很多","问题",",","比赛","并没有","拿到","奖","。\n",
+						"那段","时光","成了","我","大学","的","一段","美好的","时光",",","很遗憾","没有","拿到","奖",",","但","我们","收获了","深厚的","友谊",",","这都","无所谓","因为","我","喜欢","的","是你","呀","。\n",
+						"只要","可以",",","我","可以","陪着你","参加","千千万万","场","比赛",",","过完","千千万万","种","人生","。\n",
+						"未完待续","...",
+						],
+						py: ["jide","dasan","nanian","wozai","mouci","《","wangluo","zhengquan","》","de","xiake","","xiake","yudaole","ni",",",
+						"nashihou","juede","fangfu","kandaole","yige","xiannv",",","congnayihoi\bu","w","jiu","yizhi","toutoude","guanzhuzhe","ni","。",
+						"dangran",",","nashihou","de","women","dou","bushu","wye","yizhi","meiyou","yongqi","ba","xihuanni","shuo","chu","kou","。",
+						"wye","bzd","wsm",",","houlai","wm","sihu","bici","zoujinle","","jinle","。","keneng","shi","yuanfen",",","ye","keneng","shiw","shasha","de","nuli","ba","。",
+						"jide","natian",",","ni","zhaowo","yaow","genni","yiqi","hezuo","bisai","xiangmu","de","shihou",",",
+						"w","dangshi","chaojidongde",",","xka\b\biangdoumeixiang","jiu","zhijie","daying","le","。",
+						"houmian","faxian","ziji","haishi","zidale",",","yinwei","dui","jishu","bion\b\bngbushi","henliaojie",",","xiangmu","yiran","cunzai","henduo","wenti",",","bisai","bingmeiyou","nadao","jiang","。",
+						"naduan","shiguang","chengle","w","daxue","de","yiduan","meihaode","shiguang",",","henyihan","meiyou","nadao","jiang",",","dan","wmen","shouhuole","shenhoude","youyi",",","zhedou","wusuowei","yinwei","w","xihuan","de","shini","ya","。",
+						"zhiyao","keyi",",","w","ky","peizheni","canjia","qianqianwwan","chang","bisai",",","guowan","qqww","zhong","rensheng","。",
+						"weiwandaixu","...",
+						],
 					}
 				], // Sentences needs to be typed
 				startDelay: 1000, // Time before typing starts, in ms
 				typeSpeed: 80, // Time gap between each character, in ms
 				pause: 1000, // Time waiting before each sentence is to be deleted, in ms
 				backSpeed: 50, // Backspacing speed, in ms
-				cursorChar: "|", // Character for cursor, you may want to use "_" if you are emulating a console
+				cursorChar: "_", // Character for cursor, you may want to use "_" if you are emulating a console
 				loop: false, // Loop when finished typing
 			});
 			demo.finished = function() {
@@ -44,7 +64,7 @@
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
-				<span id="typinyin_demo" class="keyword"> </span>
+				<span id="typinyin_demo" class="black"> </span> <br />
 				
 			</div>
 			<div id="loveHeart">
