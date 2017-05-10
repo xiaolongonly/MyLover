@@ -13,39 +13,38 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/typinyin.js"  charset="utf-8" async defer></script>
-	<script>
-		window.onload = function(){
-			var demo = new Typinyin();
-			demo.attach('#typinyin_demo'); // Attach element
-			demo.setOptions({
-				sentences: [
-					{
-						ch: ["山",{pause: 1500}/* Pause 1500ms */,"有木兮","木","幼稚",{del: 2}/* Delete 2 characters */,"有枝","，\n","心悦君系",{del: 1},"兮","君不知","。\n"],
-						py: ["shan","","youmuxi","mu","youzhi","","youzhi","，","xinyuejunxi","","xi","junbuzhi","。"],
-					}
-				], // Sentences needs to be typed
-				startDelay: 1000, // Time before typing starts, in ms
-				typeSpeed: 80, // Time gap between each character, in ms
-				pause: 1000, // Time waiting before each sentence is to be deleted, in ms
-				backSpeed: 50, // Backspacing speed, in ms
-				cursorChar: "|", // Character for cursor, you may want to use "_" if you are emulating a console
-				loop: false, // Loop when finished typing
-			});
-			demo.finished = function() {
-				console.log("Typinyin.js Demo Finished!"); // Excute on finished typing, will not excute when "loop" has been set to true
-			};
-			demo.init(); // Initialize and start typing
-		}
-	</script>
 </head>
 
 <body>
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
-				<span id="typinyin_demo" class="keyword"> </span>
-				
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* We are both TKK SEer and programmers,</span><br />
+				<span class="space"/><span class="comments">* so I write some code to share to you.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Xiaolong"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Mingge"</span>);<br />
+				<span class="comments">// Jan 16, 2017, I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// And take care of u and our love.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
+				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
+				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
@@ -95,6 +94,7 @@
 			}, 500);
 
 			adjustCodePosition();
+			$("#code").typewriter();
 		}
 	</script>
 </body>
